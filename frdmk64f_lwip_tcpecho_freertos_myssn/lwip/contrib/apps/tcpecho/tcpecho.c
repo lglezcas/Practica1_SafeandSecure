@@ -37,6 +37,7 @@
 
 #include "lwip/sys.h"
 #include "lwip/api.h"
+#include "MAGICK64CARD.h"
 /*-----------------------------------------------------------------------------------*/
 static void 
 tcpecho_thread(void *arg)
@@ -52,7 +53,7 @@ tcpecho_thread(void *arg)
   netconn_bind(conn, IP6_ADDR_ANY, 7);
 #else /* LWIP_IPV6 */
   conn = netconn_new(NETCONN_TCP);
-  netconn_bind(conn, IP_ADDR_ANY, 7);
+  netconn_bind(conn, IP_ADDR_ANY, 10000);
 #endif /* LWIP_IPV6 */
   LWIP_ERROR("tcpecho: invalid conn", (conn != NULL), return;);
 
@@ -74,7 +75,7 @@ tcpecho_thread(void *arg)
         /*printf("Recved\n");*/
         do {
              netbuf_data(buf, &data, &len);
-             err = netconn_write(newconn, data, len, NETCONN_COPY);
+             MAGICK64CARD_vNewMsgRx((uint8_t *)data, len,newconn);
 #if 0
             if (err != ERR_OK) {
               printf("tcpecho: netconn_write: error \"%s\"\n", lwip_strerr(err));

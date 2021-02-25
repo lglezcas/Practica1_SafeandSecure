@@ -45,7 +45,9 @@ lwip/contrib/apps/tcpecho/tcpecho.o lwip/contrib/apps/tcpecho/tcpecho.d: \
  C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/def.h \
  C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/ip4_addr.h \
  C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/ip6_addr.h \
- C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/def.h
+ C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/def.h \
+ C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\source\MAGICK64CARD/MAGICK64CARD.h \
+ C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include\lwip/api.h
 
 ../lwip/contrib/apps/tcpecho/tcpecho.h:
 
@@ -138,3 +140,7 @@ C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_
 C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/ip6_addr.h:
 
 C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include/lwip/def.h:
+
+C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\source\MAGICK64CARD/MAGICK64CARD.h:
+
+C:\Users\Modutram\Documents\GitHub\mySafeAndSecureNetwork\frdmk64f_lwip_tcpecho_freertos_myssn\lwip\src\include\lwip/api.h:

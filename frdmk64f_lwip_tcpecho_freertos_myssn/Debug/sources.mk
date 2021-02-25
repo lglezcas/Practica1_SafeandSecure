@@ -31,6 +31,8 @@ lwip/src/core/ipv4 \
 lwip/src/core/ipv6 \
 lwip/src/netif \
 lwip/src/netif/ppp \
+source/MAGICK64CARD \
+source/MSGSAFE \
 source \
 startup \
 utilities \

@@ -4,7 +4,8 @@
 import myssn
 import sys
 
-SERVER_ADDRESS = 'localhost'
+#SERVER_ADDRESS = 'localhost'
+SERVER_ADDRESS = '192.168.0.102'
 
 try:
     client = myssn.client_connect(SERVER_ADDRESS)
@@ -23,8 +24,8 @@ try:
                 print('DATA: {!r}'.format(dat))
             else:
                 print('INFO: closing socket')
-                myssn.close(sock)
-                break
+               # myssn.close(sock)
+               # break
         except: 
             print('INFO: Client Exception') 
             break       

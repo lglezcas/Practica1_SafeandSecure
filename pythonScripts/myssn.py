@@ -142,7 +142,7 @@ def send(sock, data):
     bytes_msg = enc(data)
     if verbose: print('myssn INFO: encrypted message: {}'.format(bytes_msg))
     # Second, calculate the CRC over the encrypted message
-    crc = binascii.crc32(bytes_msg)
+    crc = binascii.crc32(bytes_msg,0x00000000)
     # crc is a python's integer, we have to convert it into a 4 bytes array to transmit it
     crc_bytes = crc.to_bytes(4, byteorder = 'little')
     if verbose: print('myssn INFO: tx crc32 = {}, crc bytes = {}'.format(crc, crc_bytes))

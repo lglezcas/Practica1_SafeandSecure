@@ -10,6 +10,8 @@ RM := rm -rf
 -include sources.mk
 -include utilities/subdir.mk
 -include startup/subdir.mk
+-include source/MSGSAFE/subdir.mk
+-include source/MAGICK64CARD/subdir.mk
 -include source/subdir.mk
 -include lwip/src/netif/ppp/subdir.mk
 -include lwip/src/netif/subdir.mk
@@ -42,25 +44,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: frdmk64f_lwip_tcpecho_freertos_myssn.axf
+all: Practica1_SafeAndSecureNetwork.axf
 
 # Tool invocations
-frdmk64f_lwip_tcpecho_freertos_myssn.axf: $(OBJS) $(USER_OBJS)
+Practica1_SafeAndSecureNetwork.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -Xlinker -Map="frdmk64f_lwip_tcpecho_freertos_myssn.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T frdmk64f_lwip_tcpecho_freertos_myssn_Debug.ld -o "frdmk64f_lwip_tcpecho_freertos_myssn.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -Xlinker -Map="Practica1_SafeAndSecureNetwork.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -T "Practica1_SafeAndSecureNetwork_Debug.ld" -o "Practica1_SafeAndSecureNetwork.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) frdmk64f_lwip_tcpecho_freertos_myssn.axf
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) Practica1_SafeAndSecureNetwork.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "frdmk64f_lwip_tcpecho_freertos_myssn.axf"; # arm-none-eabi-objcopy -v -O binary "frdmk64f_lwip_tcpecho_freertos_myssn.axf" "frdmk64f_lwip_tcpecho_freertos_myssn.bin" ; # checksum -p MK64FN1M0xxx12 -d "frdmk64f_lwip_tcpecho_freertos_myssn.bin";
+	-arm-none-eabi-size "Practica1_SafeAndSecureNetwork.axf"; # arm-none-eabi-objcopy -v -O binary "Practica1_SafeAndSecureNetwork.axf" "Practica1_SafeAndSecureNetwork.bin" ; # checksum -p MK64FN1M0xxx12 -d "Practica1_SafeAndSecureNetwork.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents post-build
